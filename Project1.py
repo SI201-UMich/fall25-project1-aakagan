@@ -67,6 +67,7 @@ def bill_size(data):
     return result
 
 #Calculation #3 - Find the average weight in grams based on the penguins sex and species
+import math
 def avg_weight(data):
     weight = get_value('body_mass_g', data)
     species = get_value('species', data)
@@ -77,9 +78,14 @@ def avg_weight(data):
     for species, sex, weight in individual_list:
         try:
           w = float(weight)
+          if math.isnan(w):
+              continue
         except(ValueError, TypeError):
              continue   
         cleaned_list.append((species, sex, w))
+
+    if not cleaned_list:
+        return {}
 
     d1 = {}
 
@@ -89,6 +95,8 @@ def avg_weight(data):
     d2 = {}
 
     for (species, sex), weights in d1.items():
+        if not weights:
+            continue
         avg_weight = sum(weights) / len(weights)
         d2[(species, sex)] = round(avg_weight, 2)
 
@@ -130,21 +138,19 @@ def percent_over_weight(data):
 
 # Calculation #5 - Calculates correlations between body mass and each of bill_length, bill_depth, and flipper_length. 
 # Returns tuples with feature most associated and the correlation to be used for final output.
-def weight_predictors_ranking(data):
 #def weight_predictors_ranking(data):
 
 
+
 # Calculation #6 - Computes bill_length_mm / bill_depth_mm per penguin then it summarizes by species and finds global extremes.
-def bill_shape_ratio_summary(data):
 #def bill_shape_ratio_summary(data):
 
 
 
-@@ -114,19 +112,19 @@
 def main():
     data = csv_open('penguins.csv')
     species_list = get_value('species', data)
-    counting_dict = island_per(data)
+    counting_dict = island_percentage(data)
     counting_dict = island_percentage(data)
     b_size = bill_size(data)
     average_weight = avg_weight(data)
