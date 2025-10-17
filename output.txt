@@ -1,0 +1,19 @@
+Final Analysis for Calculations
+Question: How do penguin species differ across physical and geographical traits 
+
+
+Island Proportions of Total Penguin Population: {'Torgersen': '15.12%', 'Biscoe': '48.84%', 'Dream': '36.05%'}
+
+Average Bill Size for Penguins Sorted by Species: {'Adelie': 712.94, 'Gentoo': 713.65, 'Chinstrap': 901.99}
+
+Average Weight for Penguins, Sorted by Sex and Species: {('Adelie', 'Male'): 4043.49, ('Adelie', 'Female'): 3368.84, ('Gentoo', 'Female'): 4679.74, ('Gentoo', 'Male'): 5484.84, ('Chinstrap', 'Female'): 3527.21, ('Chinstrap', 'Male'): 3938.97}
+
+Proportion of Penguin Species by Body Mass over the Global Mean Mass: {'Adelie': '16.6%', 'Gentoo': '95.1%', 'Chinstrap': '10.3%'}
+
+
+Correlation Between Flipper Length and Penguin Mass: {'correlation': 0.87, 'interpretation': 'strong positive correlation between flipper length and penguin weight'}
+
+Spread Metrics for Flipper Lengths of Penguins Sorterd by Species: {'Adelie': {'min': 172.0, 'max': 210, 'range': 38.0}, 'Gentoo': {'min': 203.0, 'max': 231, 'range': 28.0}, 'Chinstrap': {'min': 178.0, 'max': 212, 'range': 34.0}}
+
+Conclusion: Based on these results, Gentoo penguins tend to be the largest and heaviest species overall, Adelie penguins show more
+moderate physical traits, and Chinstrap penguins have the smallest body mass, with clear positive correlations between flipper length and overall weight across all species.
